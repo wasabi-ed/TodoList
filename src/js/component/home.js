@@ -1,24 +1,92 @@
-import React from "react";
+// import React from "react";
+// // import logo from "./logo.svg";
+// import "./App.css";
+// // import ListItems from "./ListItems";
+// // import { library } from "@fortawesome/fontawesome-svg-core";
+// // import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+// library.add(faTrash);
 
-//create your first component
-export function Home() {
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-}
+// class App extends React.Component {
+// 	constructor(props) {
+// 		super(props);
+// 		this.state = {
+// 			items: [],
+// 			currentItem: {
+// 				text: "",
+// 				key: ""
+// 			}
+// 		};
+// 		this.addItem = this.addItem.bind(this);
+// 		this.handleInput = this.handleInput.bind(this);
+// 		this.deleteItem = this.deleteItem.bind(this);
+// 		this.setUpdate = this.setUpdate.bind(this);
+// 	}
+// 	addItem(e) {
+// 		e.preventDefault();
+// 		const newItem = this.state.currentItem;
+// 		if (newItem.text !== "") {
+// 			const items = [...this.state.items, newItem];
+// 			this.setState({
+// 				items: items,
+// 				currentItem: {
+// 					text: "",
+// 					key: ""
+// 				}
+// 			});
+// 		}
+// 	}
+// 	handleInput(e) {
+// 		this.setState({
+// 			currentItem: {
+// 				text: e.target.value,
+// 				key: Date.now()
+// 			}
+// 		});
+// 	}
+// 	deleteItem(key) {
+// 		const filteredItems = this.state.items.filter(item => item.key !== key);
+// 		this.setState({
+// 			items: filteredItems
+// 		});
+// 	}
+// 	setUpdate(text, key) {
+// 		console.log("items:" + this.state.items);
+// 		const items = this.state.items;
+// 		items.map(item => {
+// 			if (item.key === key) {
+// 				console.log(item.key + "    " + key);
+// 				item.text = text;
+// 			}
+// 		});
+// 		this.setState({
+// 			items: items
+// 		});
+// 	}
+// 	render() {
+// 		return (
+// 			<div className="App">
+// 				<header>
+// 					<form id="to-do-form" onSubmit={this.addItem}>
+// 						<input
+// 							type="text"
+// 							placeholder="Enter task"
+// 							value={this.state.currentItem.text}
+// 							onChange={this.handleInput}
+// 						/>
+// 						<button type="submit">Add</button>
+// 					</form>
+// 					<p>{this.state.items.text}</p>
+
+// 					<ListItems
+// 						items={this.state.items}
+// 						deleteItem={this.deleteItem}
+// 						setUpdate={this.setUpdate}
+// 					/>
+// 				</header>
+// 			</div>
+// 		);
+// 	}
+// }
+
+// export default App;
